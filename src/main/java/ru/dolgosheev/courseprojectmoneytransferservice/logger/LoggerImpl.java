@@ -10,14 +10,8 @@ import java.time.format.FormatStyle;
 public class LoggerImpl implements Logger {
 
     private static Logger instance = null;
-    private FileWriter writer;
 
     private LoggerImpl() {
-        try {
-            writer = new FileWriter("log.txt", true);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     public static Logger getInstance() {
@@ -30,6 +24,7 @@ public class LoggerImpl implements Logger {
     @Override
     public void log(String message) {
         try {
+            FileWriter writer = new FileWriter("log.txt", true);
             writer.append("[")
                     .append(LocalDate.now().format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM)))
                     .append(":")
