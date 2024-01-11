@@ -1,27 +1,16 @@
 package ru.dolgosheev.courseprojectmoneytransferservice.model;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@Getter
 public class Amount {
-    private Currency currency;
+
     private Float value;
 
-    public Amount() {
-    }
-
-    public Amount(Currency currency, Long value) {
-        this.currency = currency;
+    public Amount(Long value) {
         this.value = (float) (value / 100);
-    }
-
-    public Currency getCurrency() {
-        return currency;
-    }
-
-    public void setCurrency(Currency currency) {
-        this.currency = currency;
-    }
-
-    public Float getValue() {
-        return value;
     }
 
     public void setValue(Long value) {
@@ -30,6 +19,6 @@ public class Amount {
 
     @Override
     public String toString() {
-        return value + " " + currency.name();
+        return value + " руб.";
     }
 }

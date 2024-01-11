@@ -11,8 +11,8 @@ import ru.dolgosheev.courseprojectmoneytransferservice.logger.LoggerImpl;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class ExceptionHandlerAdvice {
-    private Logger logger;
-    private AtomicInteger errorId;
+    private final Logger logger;
+    private final AtomicInteger errorId;
 
     public ExceptionHandlerAdvice() {
         logger = LoggerImpl.getInstance();

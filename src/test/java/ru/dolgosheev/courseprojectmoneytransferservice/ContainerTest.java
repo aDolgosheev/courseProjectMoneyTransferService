@@ -34,7 +34,7 @@ public class ContainerTest {
     @Test
     void appDoTransferTest() {
         Transfer transfer = new Transfer(
-                new Amount(Currency.RUR, 500L),
+                new Amount(500L),
                 "345",
                 "0000111122223333",
                 "12/24",
@@ -47,7 +47,7 @@ public class ContainerTest {
     @Test
     void appValidTransferTest() {
         Transfer transfer = new Transfer(
-                new Amount(Currency.RUR, 500L),
+                new Amount(500L),
                 null,
                 "",
                 "",

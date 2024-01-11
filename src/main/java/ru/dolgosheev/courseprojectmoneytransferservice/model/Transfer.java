@@ -1,7 +1,14 @@
 package ru.dolgosheev.courseprojectmoneytransferservice.model;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.util.Objects;
 
+@NoArgsConstructor
+@Setter
+@Getter
 public class Transfer {
     private Amount amount;
     private String cardFromCVV;
@@ -11,70 +18,11 @@ public class Transfer {
     private String date;
     private String time;
 
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
-    }
-
-    public Transfer() {
-    }
-
     public Transfer(Amount amount, String cardFromCVV, String cardFromNumber, String cardFromValidTill, String cardToNumber) {
         this.amount = amount;
         this.cardFromCVV = cardFromCVV;
         this.cardFromNumber = cardFromNumber;
         this.cardFromValidTill = cardFromValidTill;
-        this.cardToNumber = cardToNumber;
-    }
-
-    public Amount getAmount() {
-        return amount;
-    }
-
-    public void setAmount(Amount amount) {
-        this.amount = amount;
-    }
-
-    public String getCardFromCVV() {
-        return cardFromCVV;
-    }
-
-    public void setCardFromCVV(String cardFromCVV) {
-        this.cardFromCVV = cardFromCVV;
-    }
-
-    public String getCardFromNumber() {
-        return cardFromNumber;
-    }
-
-    public void setCardFromNumber(String cardFromNumber) {
-        this.cardFromNumber = cardFromNumber;
-    }
-
-    public String getCardFromValidTill() {
-        return cardFromValidTill;
-    }
-
-    public void setCardFromValidTill(String cardFromValidTill) {
-        this.cardFromValidTill = cardFromValidTill;
-    }
-
-    public String getCardToNumber() {
-        return cardToNumber;
-    }
-
-    public void setCardToNumber(String cardToNumber) {
         this.cardToNumber = cardToNumber;
     }
 
